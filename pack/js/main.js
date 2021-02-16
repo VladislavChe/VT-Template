@@ -1,6 +1,6 @@
 /* Включение главной функции jQuery */
 $(document).ready(function () {
-  /* Инициализация gallery-slider-7 в html */
+  /* Инициализация gallery-text-pictures в html */
   $('.gallery-slider-7').slick({
     /* Настройки слайдера */
     slidesToShow: 3, // количество показываемых слайдов
@@ -16,5 +16,5 @@ $(document).ready(function () {
     speed: 1700 /* Скорость анимации */,
     fade: false /* Плавное растворение картинок */,
   });
-  /* Инициализация gallery-slider-3 в html-END */
+  /* Инициализация gallery-text-pictures в html-END */
 });
