@@ -26,5 +26,3 @@
 1) Перенести в папку pack/img/gallery-1 новые картинки
 2) Открыть файл gallery-text-pictures.html в редакторе кода
 3) Поменять путь <img src="assets/pack/img/gallery-1/img-1.jpg" alt="" /> на название новой картинки
-
-ТЕст
