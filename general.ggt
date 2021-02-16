@@ -1,0 +1,211 @@
+<?ggf
+/*
+	Create the form in the HTML dialog box
+*/
+	form.addLineEdit("htmltitle","HTML Page Title",0,"$(upt)");
+	form.addCheckBox("parseanchor","Direct node access",false);
+	form.addLine();
+	form.addFileNameInput("css","Include external CSS file","Cascading Style Sheet","Style Sheet (*.css)");
+	form.addLine();
+	form.addCheckBox("jsxml","Embedded XML",false);
+	form.addCheckBox("gginfo","Create files for external embedding",false);
+	
+	// define possible output formats
+	form.addOutputFormat("HTML (.html)","html");
+	form.addOutputFormat("HTML (.htm)","htm");
+?>
+<?ggs
+	var configobj={ version: 1.0, type: 'panorama', external:{ js:[], css:[] }, skin:{}, player: {} };
+	var d=new Date();
+	configobj.creationdate=d.toISOString();
+	configobj.configuration=outputfile;
+	configobj.player.js='pano2vr_player.js';
+	
+	if (formvalue["gginfo"]=="true") {
+	 	document.addPreviewImage("preview.jpg",output.windowWidth,output.windowHeight);
+		configobj.preview={ img:'preview.jpg', width: output.windowWidth,height: output.windowHeight };
+	}
+	
+	function writeUserdata(v) 
+	{
+		var s;
+		s=document.expandVariables(v);
+		document.write(document.encode(document.removeTags(s),true));
+	}
+?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+		<title><?ggs document.write(document.encode(document.removeTags(document.expandVariables(formvalue["htmltitle"])))); ?></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="mobile-web-app-capable" content="yes" />
+<?ggs
+	if (formvalue["gginfo"]=="true") {
+?>
+		<meta property="og:image" content="preview.jpg">
+<?ggs
+	}
+?>
+
+		<!-- CSS СТИЛЕВЫЕ ФАЙЛЫ -->
+		<link rel="stylesheet" href="assets/pack/css/main.css">
+		<!-- ------------------ -->
+
+		<style type="text/css" title="Default">
+			/* fullscreen */
+			html {
+				height:100%;
+			}
+			body {
+				height:100%;
+				margin: 0px;
+				overflow:hidden; /* disable scrollbars */
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* remove highlight on tab for iOS/Android */
+			}
+			/* fix for scroll bars on webkit & >=Mac OS X Lion */ 
+			::-webkit-scrollbar {
+				background-color: rgba(0,0,0,0.5);
+				width: 0.75em;
+			}
+			::-webkit-scrollbar-thumb {
+    			background-color:  rgba(255,255,255,0.5);
+			}
+
+	</style>	
+<?ggs
+	if (formvalue['css']!='') {
+		document.addfile(document.expandFilename(formvalue["css"]),"styles.css");
+		document.writeln('\t\t<link href="styles.css" rel="stylesheet">');
+	}
+?>
+	</head>
+	<body>
+
+<!-- - - - - - - 8<- - - - - - cut here - - - - - 8<- - - - - - - -->
+
+		<script type="text/javascript" src="pano2vr_player.js">
+		</script>
+<?ggs 
+	if (typeof outputskinfile === 'undefined') {
+		outputskinfile = "skin.js";
+	}
+	if (output.skinFile!="") { 
+		configobj.skin.js=outputskinfile;
+		document.addfile(document.expandOutputFilename(outputskinfile));
+?>
+		<script type="text/javascript" src="<?ggs document.write(outputskinfile); ?>">
+		</script>
+<?ggs } ?>
+
+<?ggs
+	for(var key in formvalue["_gg_external_css"]) {
+		configobj.external.css.push(formvalue["_gg_external_css"][key]);
+		document.writeln('\t\t<link rel="stylesheet" href="' + formvalue["_gg_external_css"][key] + '"/>');
+	} ?>
+
+<?ggs
+	for(var key in formvalue["_gg_external_js"]) {
+		configobj.external.js.push(formvalue["_gg_external_js"][key]);
+		document.writeln('\t\t<script src="' + formvalue["_gg_external_js"][key] + '"></script>');
+	} ?>
+
+		<div id="container" style="width:100%;height:100%;overflow:hidden;">
+			
+		<br>Loading...<br><br>
+
+		</div>
+		<script type="text/javascript">
+<?ggs if (formvalue["parseanchor"]=="true") {  ?>
+		function parseParams(paramsString, params) {
+			paramsString = paramsString.substring(1);
+			var firstSeparatorPos = paramsString.indexOf(",");
+			if (firstSeparatorPos != -1) {
+				params.startNode = paramsString.slice(0, firstSeparatorPos);
+				var viewingParamsString = paramsString.slice(firstSeparatorPos + 1);
+				var viewingParams = viewingParamsString.split(",");
+				if (viewingParams.length >= 3) {
+					var startView = {};
+					startView["pan"] = viewingParams[0];
+					startView["tilt"] = viewingParams[1];
+					startView["fov"] = viewingParams[2];
+					if (viewingParams.length >= 4) {
+						startView["projection"] = viewingParams[3];
+					}
+					params.startView = startView;
+				}
+			} else {
+				params.startNode = paramsString;
+				params.startView = "";
+			}
+		}
+		var params = {};
+		parseParams(document.location.hash, params);
+		var startNode = params.startNode;
+		var startView = params.startView;
+
+		if (("onhashchange" in window) && (!(/MSIE (\d+\.\d+);/.test(navigator.userAgent)))) {
+			window.onhashchange = function () {
+				parseParams(window.location.hash, params);
+				pano.openNext('{' + params.startNode + '}', params.startView);
+         	}
+	    } else {
+        	var lastHash = window.location.hash;
+        	window.setInterval(function () {
+	           	if (window.location.hash != lastHash) {
+   	        		lastHash = window.location.hash;
+					parseParams(window.location.hash, params);
+					pano.openNext('{' + params.startNode + '}', params.startView);
+        	   	}
+        	}, 100);
+		}
+<?ggs } ?>	
+			// create the panorama player with the container
+			pano=new pano2vrPlayer("container");
+<?ggs	if (formvalue["parseanchor"]=="true") {  ?>
+			pano.startNode = startNode;
+			pano.startView = startView;
+<?ggs 	}  ?>
+<?ggs 	if (output.skinFile!="") { ?>
+			// add the skin object
+			skin=new pano2vrSkin(pano);
+<?ggs 	} ?>
+			// load the configuration
+<?ggs
+			if ((formvalue["jsxml"]=="true") && (formvalue["_gg_panorama"])) {
+				panostr=document.encode(formvalue["_gg_panorama"].toString(),true);
+				panostr=panostr.split("'").join("&#39;"); // workaround for .replace
+				panostr=panostr.split("\n").join("';\n\t\t\tpanorama+='");
+?>
+			panorama='<?ggs document.write(panostr); ?>';
+			pano.readConfigString(panorama);
+<?ggs 		
+			} else { 
+				document.addfile(document.expandOutputFilename(outputfile));
+?>		
+			window.addEventListener("load", function() {
+				pano.readConfigUrlAsync("<?ggs document.write(outputfile); ?>");
+			});
+<?ggs 	} ?>
+		</script>
+		<noscript>
+			<p><b>Please enable Javascript!</b></p>
+		</noscript>
+<!-- - - - - - - 8<- - - - - - cut here - - - - - 8<- - - - - - - --> 
+		<!-- Hack needed to hide the url bar on iOS 9, iPhone 5s --> 
+		<div style="width:1px;height:1px;"></div>
+		
+		<!-- Подключение JS --> 
+		<script src="assets/pack/js/jquery-3.5.0.min.js"></script>
+		<script src="assets/pack/js/slick.min.js"></script>
+		<script src="assets/pack/js/main.js"></script>
+		</body>
+</html>
+<?ggs
+	if (formvalue["gginfo"]=="true") {
+		document.createutf8file("gginfo.json", JSON.stringify(configobj,null,"\t"));
+	}
+?>
