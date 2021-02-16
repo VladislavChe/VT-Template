@@ -1,0 +1,956 @@
+/***************************************************/
+/******************  Коментарии  *******************/
+/***************************************************/
+
+/****************** Стили для текста gallery ***********************/
+
+/* Стили для слайдера gallery-1 (обычная одинарная галерея) */
+/* Стили для слайдера gallery-2 (связанные 2 галереи - большая и несколько маленьких превью) */
+/* Стили для слайдера gallery-3 (галерея во всю ширину экрана) */
+/* Стили для слайдера gallery-4 (галерея с плавным затуханием) */
+/* Стили для слайдера gallery-5 (несколько галерей в скролле) */
+
+/* Это значение двигает точки вверх вниз */
+/* Расположение точек по горизонтали */
+/* Размер точек */
+/* Тут меняется высота картинки */
+
+/******************  Стили для img-3ps  *******************/
+
+/***************************************************/
+/******************  Коментарии-конец  *************/
+/***************************************************/
+
+button:active,
+button:focus {
+  outline: none !important;
+}
+button::-moz-focus-inner {
+  border: 0 !important;
+}
+
+/******************  Стили для текста gallery  *******************/
+
+.gallery-wrapp /* Стили для обертки (контейнера) текста */ {
+  padding: 0px !important; /* Внутренние отступы контейнера */
+}
+
+.gallery-title /* Стили для названия */ {
+  /*font-weight: bold !important;  Толщина текста */
+  font-size: 15px !important; /* Размер шрифта */
+  color: #ffffff !important; /* Цвет текста */
+  margin-bottom: 5px !important; /* Отступ вниз от названия до адреса */
+}
+
+.gallery-adress /* Стили для адреса */ {
+  text-align: center !important; /* Центрирование текста */
+  font-size: 15px !important; /* Размер шрифта */
+  color: #ffffff !important; /* Цвет текста */
+}
+
+/******************  Стили для текста line  *******************/
+
+.line-wrapp /* Стили для обертки (контейнера) текста */ {
+  padding: 15px 0px 0px 9px !important; /* Внутренние отступы контейнера */
+  white-space: normal !important; /*Отображение пробелов между словами */
+}
+
+.line-name {
+  text-align: right !important; /* Центрирование текста */
+}
+
+.line-prise {
+  text-align: right !important; /* Центрирование текста */
+}
+
+.line-description {
+}
+
+.line-title /* Стили для названия */ {
+  /*font-weight: bold !important;  Толщина текста */
+  text-align: left !important; /* Центрирование текста */
+  font-size: 12px !important; /* Размер шрифта */
+  color: #ffffff !important; /* Цвет текста */
+  margin-bottom: 11px !important; /* Отступ вниз от названия до адреса */
+  max-width: 270px !important; /* Длина строки */
+}
+
+.line-adress /* Стили для адреса */ {
+  text-align: left !important; /* Центрирование текста */
+  font-size: 12px !important; /* Размер шрифта */
+  color: #ffffff !important; /* Цвет текста */
+  max-width: 270px !important; /* Длина строки */
+}
+
+/******************  Стили для текста line  *******************/
+
+.text-fone-wrapp /* Стили для обертки (контейнера) текста */ {
+  padding: 15px !important; /* Внутренние отступы контейнера */
+  white-space: normal !important; /*Отображение пробелов между словами */
+  background: yellow !important;
+  width: 200px !important;
+  height: 50px !important;
+  margin: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.text-fone-name {
+  text-align: center !important; /* Центрирование текста */
+  color: red;
+  font-size: 20px;
+  text-shadow: -0 -5px 2px #ffffff, 0 -5px 2px #ffffff, -0 5px 2px #ffffff,
+    0 5px 2px #ffffff, -5px -0 2px #ffffff, 5px -0 2px #ffffff,
+    -5px 0 2px #ffffff, 5px 0 2px #ffffff, -1px -5px 2px #ffffff,
+    1px -5px 2px #ffffff, -1px 5px 2px #ffffff, 1px 5px 2px #ffffff,
+    -5px -1px 2px #ffffff, 5px -1px 2px #ffffff, -5px 1px 2px #ffffff,
+    5px 1px 2px #ffffff, -2px -5px 2px #ffffff, 2px -5px 2px #ffffff,
+    -2px 5px 2px #ffffff, 2px 5px 2px #ffffff, -5px -2px 2px #ffffff,
+    5px -2px 2px #ffffff, -5px 2px 2px #ffffff, 5px 2px 2px #ffffff,
+    -3px -5px 2px #ffffff, 3px -5px 2px #ffffff, -3px 5px 2px #ffffff,
+    3px 5px 2px #ffffff, -5px -3px 2px #ffffff, 5px -3px 2px #ffffff,
+    -5px 3px 2px #ffffff, 5px 3px 2px #ffffff, -4px -5px 2px #ffffff,
+    4px -5px 2px #ffffff, -4px 5px 2px #ffffff, 4px 5px 2px #ffffff,
+    -5px -4px 2px #ffffff, 5px -4px 2px #ffffff, -5px 4px 2px #ffffff,
+    5px 4px 2px #ffffff, -5px -5px 2px #ffffff, 5px -5px 2px #ffffff,
+    -5px 5px 2px #ffffff, 5px 5px 2px #ffffff, -5px -5px 2px #ffffff,
+    5px -5px 2px #ffffff, -5px 5px 2px #ffffff, 5px 5px 2px #ffffff;
+}
+
+.text-fone-prise {
+  text-align: right !important; /* Центрирование текста */
+  color: red;
+}
+
+.text-fone-description {
+  color: red;
+}
+
+/******************  Стили для line-text  *******************/
+.line-title /* Стили для названия */ {
+  /*font-weight: bold !important;  Толщина текста */
+  text-align: left !important; /* Центрирование текста */
+  font-size: 12px !important; /* Размер шрифта */
+  color: #ffffff !important; /* Цвет текста */
+  margin-bottom: 11px !important; /* Отступ вниз от названия до адреса */
+  max-width: 270px !important; /* Длина строки */
+}
+
+.line-adress /* Стили для адреса */ {
+  text-align: left !important; /* Центрирование текста */
+  font-size: 12px !important; /* Размер шрифта */
+  color: #ffffff !important; /* Цвет текста */
+  max-width: 270px !important; /* Длина строки */
+}
+
+/******************  Стили для text-dot  *******************/
+.line-dot {
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+}
+
+/******************  Стили для img-3ps-bottom-block  *******************/
+.img-3ps {
+  -webkit-display: flex !important;
+  -webkit-justify-content: center !important;
+  -webkit-align-items: center !important;
+
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.img-3ps-1 {
+  -webkit-position: static !important;
+  -webkit-width: auto !important;
+
+  position: static !important;
+  width: auto !important;
+}
+
+.img-3ps-2 {
+  -webkit-position: static !important;
+  -webkit-width: auto !important;
+  -webkit-margin-right: 20px;
+
+  position: static !important;
+  width: auto !important;
+  margin-right: 20px;
+}
+
+.img-3ps-3 {
+  -webkit-position: static !important;
+  -webkit-width: auto !important;
+  -webkit-margin-right: 20px;
+
+  position: static !important;
+  width: auto !important;
+  margin-right: 20px;
+}
+
+.img-3ps-1 img {
+  -webkit-width: auto !important;
+  -webkit-position: static !important;
+
+  width: auto !important;
+  position: static !important;
+}
+
+.img-3ps-2 img {
+  -webkit-width: auto !important;
+  -webkit-position: static !important;
+
+  width: auto !important;
+  position: static !important;
+}
+
+.img-3ps-3 img {
+  -webkit-width: auto !important;
+  -webkit-position: static !important;
+
+  width: auto !important;
+  position: static !important;
+}
+
+/******************  Стили для img-midl-block  *******************/
+
+.img-midl-block {
+  -webkit-width: auto !important;
+  width: auto !important;
+}
+
+.img-midl-block img {
+  -webkit-width: auto !important;
+  width: auto !important;
+}
+/******************  Стили для map  *******************/
+.map-block {
+  position: relative !important;
+}
+
+.map-wrapp {
+  position: static !important;
+  width: auto !important;
+  background: blue !important;
+}
+
+.map-img img {
+  width: auto !important;
+}
+/*******************************************************************/
+/******************  Стили для слайдера БАЗОВЫЕ  *******************/
+/*******************************************************************/
+
+/* Слайдер *БАЗА СТИЛЕЙ* */
+.slick-slider {
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
+/* Слайдер с точками */
+.slick-slider.slick-dotted {
+}
+/* Ограничивающая оболочка */
+.slick-list {
+}
+/* Лента слайдов */
+.slick-track {
+}
+
+/* Слайд */
+.slick-slide {
+  outline: none !important; /* отключение обводки на слайде при клике */
+}
+
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {
+}
+/* Слайд основной */
+.slick-slide.slick-current {
+}
+/* Слайд по центру */
+.slick-slide.slick-center {
+}
+/* Клонированный слайд */
+.slick-slide.slick-cloned {
+}
+/* Стрелка */
+.slick-arrow {
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}
+/* Точки (булиты) */
+.slick-dots {
+}
+.slick-dots li {
+}
+/* Активная точка */
+.slick-dots li.slick-active {
+}
+/* Элемент точки */
+.slick-dots li button {
+}
+
+/* Обертка слайдера */
+.flex-wrapp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.wrapper {
+  height: 100%;
+  padding: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Слайдер */
+.slick-slider {
+  min-width: 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
+/* Слайдер с точками */
+.slick-slider.slick-dotted {
+}
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+  height: 100%;
+}
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+  align-items: center;
+}
+
+/*******************************************************************/
+/****************** Стили для слайдера gallery-1 *******************/
+/*******************************************************************/
+
+/* Лента слайдов , контейнер в котором центруется картинка */
+.gallery-slider .slick-track {
+  display: flex;
+  height: 93%; /* Тут меняется высота картинки */
+}
+
+/* Конкретный слайдер */
+.gallery-slider {
+  position: relative;
+  padding: 0px 0px;
+  height: 100%;
+}
+
+/* Стрелка */
+.gallery-slider .button-wrapper .slick-arrow {
+  position: absolute;
+  margin-top: -13px;
+  z-index: 10;
+  font-size: 0;
+  width: 13px;
+  height: 26px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Стрелка влево */
+.gallery-slider .button-wrapper .slick-arrow.slick-prev {
+  left: 150px;
+  top: 50%;
+  background: url('..assets/pack/img/button/left.png') 0 0 / 90% no-repeat; /* Размер левой стрелки в % */
+}
+
+/* Стрелка вправо */
+.gallery-slider .button-wrapper .slick-arrow.slick-next {
+  right: 150px;
+  top: 50%;
+  background: url('..assets/pack/img/button/right.png') 0 0 / 90% no-repeat; /* Размер правой стрелки в % */
+}
+
+/* Обертка картинок */
+.gallery-slider .gallery-slider__item {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Картинки */
+.gallery-slider .gallery-slider__item img {
+  max-width: 93%;
+  max-height: 95%;
+  align-items: center;
+  margin: auto 0;
+}
+
+/* Точки (булиты) */
+.gallery-slider .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Размер точек */
+  position: absolute;
+  bottom: 3px; /* Это значение двигает точки вверх вниз */
+  left: 50%; /* Расположение точек по горизонтали */
+  transform: translateX(-50%);
+}
+.gallery-slider .slick-dots li {
+  list-style: none;
+  margin: 0px 10px;
+}
+.gallery-slider .slick-dots li.slick-active button {
+  background-color: #fff;
+}
+.gallery-slider .slick-dots button {
+  font-size: 0;
+  width: 5px;
+  height: 5px;
+  padding: 3px; /* Размер точек */
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+/* Стили для кнопок */
+/* Обертка кнопок */
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 20px; /* Это значение двигает ПУ вверх вниз */
+}
+
+/* Кнопки */
+
+.gallery-slider-btn {
+  /*width: 100px;
+	margin-right: 20px;*/
+  /*background: #fff;*/
+  border-radius: 25px;
+  color: #000;
+  /*padding: 10px 20px;*/
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.gallery-slider-btn img {
+  width: 25px;
+  height: 25px;
+}
+
+/*.gallery-slider-btn:hover {
+	background: #333;
+	color: #fff;
+	transition: all 0.3s ease; 
+}*/
+
+.gallery-slider-play {
+  margin-right: 20px;
+}
+
+/* Стили для слайдера gallery-1-END */
+
+/*******************************************************************/
+/**************** Стили для слайдера gallery-2-1 *******************/
+/*******************************************************************/
+.wrapper-gallery-slider-2-1 {
+  position: absolute;
+  top: 0;
+  height: 90%;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.gallery-slider-2-1 {
+  position: relative;
+  padding: 0px 0px;
+  height: 100%;
+}
+
+.gallery-slider-2-1 .slick-track {
+  display: flex;
+  height: 100%; /* Тут меняется высота картинки */
+}
+
+.gallery-slider-2-1 .gallery-slider__item {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Картинки */
+.gallery-slider-2-1 .gallery-slider__item img {
+  max-width: 100%;
+  max-height: 100%;
+  align-items: center;
+  margin: auto 0;
+}
+
+/* Стили для слайдера gallery-2-1-END */
+
+/*******************************************************************/
+/**************** Стили для слайдера gallery-2-2 *******************/
+/*******************************************************************/
+.wrapper-gallery-slider-2-2 {
+  position: absolute;
+  bottom: 0;
+  height: 10%;
+  width: 100%;
+  padding: 0 10px 10px 10px;
+  box-sizing: border-box;
+}
+
+.gallery-slider-2-2 {
+  position: relative;
+  padding: 0px 0px;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.gallery-slider-2-2 .slick-list {
+  height: 80%;
+}
+
+.gallery-slider-2-2 .slick-track {
+  display: flex;
+  height: 100%; /* Тут меняется высота картинки */
+  justify-content: space-around;
+}
+
+.gallery-slider-2-2 .gallery-slider__item {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  height: 100%;
+  width: 50px !important;
+  align-items: flex-end;
+}
+
+.gallery-slider-2-2 .gallery-slider__item.slick-active {
+}
+
+.gallery-slider-2-2 .slick-current img {
+  border: 2px solid white;
+}
+
+/* Картинки */
+.gallery-slider-2-2 .gallery-slider__item img {
+  max-width: 100%;
+  max-height: 95%;
+  align-items: center;
+  /*margin: auto 0;*/
+  width: 45px;
+  height: 45px;
+}
+/* Точки (булиты) */
+.gallery-slider-2-2 .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Размер точек */
+  position: absolute;
+  bottom: 0px; /* Это значение двигает точки вверх вниз */
+  left: 50%; /* Расположение точек по горизонтали */
+  transform: translateX(-50%);
+  margin: 0;
+}
+.gallery-slider-2-2 .slick-dots li {
+  list-style: none;
+  margin: 0px 10px;
+}
+.gallery-slider-2-2 .slick-dots button {
+  font-size: 0;
+  width: 5px;
+  height: 5px;
+  padding: 3px; /* Размер точек */
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.gallery-slider-2-2 .slick-dots li.slick-active button {
+  background-color: #fff;
+}
+/* Стили для слайдера gallery-2-2-END */
+
+/*******************************************************************/
+/****************** Стили для слайдера gallery-3 *******************/
+/*******************************************************************/
+.wrapper-gallery-slider-3 {
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-slider-3 {
+  position: relative;
+  padding: 0px 0px;
+  height: 100%;
+}
+
+.gallery-slider-3 .slick-track {
+  display: flex;
+  height: 100%; /* Тут меняется высота картинки */
+}
+
+.gallery-slider-3 .gallery-slider__item {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 5px;
+}
+
+/* Картинки */
+.gallery-slider-3 .gallery-slider__item img {
+  max-width: 100%;
+  max-height: 100%;
+  align-items: center;
+  margin: auto 0;
+}
+
+/* Точки (булиты) */
+.gallery-slider-3 .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Размер точек */
+  position: absolute;
+  bottom: 20px; /* Это значение двигает точки вверх вниз */
+  left: 50%; /* Расположение точек по горизонтали */
+  transform: translateX(-50%);
+  margin: 0;
+}
+.gallery-slider-3 .slick-dots li {
+  list-style: none;
+  margin: 0px 5px;
+}
+.gallery-slider-3 .slick-dots button {
+  font-size: 0;
+  width: 5px;
+  height: 5px;
+  padding: 3px; /* Размер точек */
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.gallery-slider-3 .slick-dots li.slick-active button {
+  background-color: #fff;
+}
+
+/* Стили для слайдера gallery-3-END */
+
+/*******************************************************************/
+/****************** Стили для слайдера gallery-4 *******************/
+/*******************************************************************/
+.wrapper-gallery-slider-4 {
+  /*padding: 10px;*/
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-slider-4 {
+  position: relative;
+  padding: 0px 0px;
+  height: 100%;
+}
+
+.gallery-slider-4 .slick-track {
+  display: flex;
+  height: 100%; /* Тут меняется высота картинки */
+}
+
+.gallery-slider-4 .gallery-slider__item {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Картинки */
+.gallery-slider-4 .gallery-slider__item img {
+  max-width: 100%;
+  max-height: 100%;
+  align-items: center;
+  margin: auto;
+}
+
+/* Стили для слайдера gallery-4-END */
+
+/*******************************************************************/
+/****************** Стили для слайдера gallery-5 *******************/
+/*******************************************************************/
+
+/* .ggskin.ggskin_subelement.ggskin_scrollarea {
+	width: 190px !important;
+	padding-bottom: 10px !important;
+}
+
+.ggskin_scrollarea {
+	width: 215px !important;
+} */
+
+.scrollarea-gal-1 {
+  top: 10px !important;
+}
+
+.scrollarea-gal-2 {
+  top: 230px !important;
+}
+
+.scrollarea-gal-3 {
+  top: 450px !important;
+}
+
+.scrollarea-gal-4 {
+  top: 670px !important;
+  padding-bottom: 10px !important;
+}
+
+.scrollarea-txt-5 {
+  top: 852px !important;
+}
+
+/****************** Стили для слайдера gallery-5-1 *******************/
+.wrapper-gallery-slider-5-1 {
+  /*padding: 10px;*/
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-slider-5-1 {
+  position: relative;
+  padding: 0px 0px;
+  height: 100%;
+}
+
+.gallery-slider-5-1 .slick-track {
+  display: flex;
+  height: 100%; /* Тут меняется высота картинки */
+}
+
+.gallery-slider-5-1 .gallery-slider__item {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Картинки */
+.gallery-slider-5-1 .gallery-slider__item img {
+  max-width: 100%;
+  max-height: 100%;
+  align-items: center;
+  margin: auto;
+}
+/* Стили для слайдера gallery-5-1-END */
+
+/****************** Стили для слайдера gallery-5-2 *******************/
+.wrapper-gallery-slider-5-2 {
+  /*padding: 10px;*/
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-slider-5-2 {
+  position: relative;
+  padding: 0px 0px;
+  height: 100%;
+}
+
+.gallery-slider-5-2 .slick-track {
+  display: flex;
+  height: 100%; /* Тут меняется высота картинки */
+}
+
+.gallery-slider-5-2 .gallery-slider__item {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Картинки */
+.gallery-slider-5-2 .gallery-slider__item img {
+  max-width: 100%;
+  max-height: 100%;
+  align-items: center;
+  margin: auto;
+}
+/* Стили для слайдера gallery-5-2-END */
+
+/****************** Стили для слайдера gallery-5-3 *******************/
+.wrapper-gallery-slider-5-3 {
+  /*padding: 10px;*/
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-slider-5-3 {
+  position: relative;
+  padding: 0px 0px;
+  height: 100%;
+}
+
+.gallery-slider-5-3 .slick-track {
+  display: flex;
+  height: 100%; /* Тут меняется высота картинки */
+}
+
+.gallery-slider-5-3 .gallery-slider__item {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Картинки */
+.gallery-slider-5-3 .gallery-slider__item img {
+  max-width: 100%;
+  max-height: 100%;
+  align-items: center;
+  margin: auto;
+}
+/* Стили для слайдера gallery-5-3-END */
+
+/****************** Стили для слайдера gallery-5-4 *******************/
+.wrapper-gallery-slider-5-4 {
+  /*padding: 10px;*/
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-slider-5-4 {
+  position: relative;
+  padding: 0px 0px;
+  height: 100%;
+}
+
+.gallery-slider-5-4 .slick-track {
+  display: flex;
+  height: 100%; /* Тут меняется высота картинки */
+}
+
+.gallery-slider-5-4 .gallery-slider__item {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Картинки */
+.gallery-slider-5-4 .gallery-slider__item img {
+  max-width: 100%;
+  max-height: 100%;
+  align-items: center;
+  margin: auto;
+}
+/* Стили для слайдера gallery-5-4-END */
+
+/*******************************************************************/
+/**** Стили для слайдера gallery-7-галерея с названиями картинок ***/
+/*******************************************************************/
+
+.wrapper-gallery-slider-7 {
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-slider-7 {
+  position: relative;
+  padding: 0px 0px;
+  height: 100%;
+}
+
+.gallery-slider-7 .slick-track {
+  display: flex;
+  height: 100%; /* Тут меняется высота картинки */
+}
+
+.gallery-slider-7 .gallery-slider__item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 5px;
+}
+
+/* Картинки */
+.gallery-slider-7 .gallery-slider__item img {
+  max-width: 100%;
+  max-height: 100%;
+  align-items: center;
+  margin: auto 0;
+}
+
+/* Точки (булиты) */
+.gallery-slider-7 .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Размер точек */
+  position: absolute;
+  bottom: 20px; /* Это значение двигает точки вверх вниз */
+  left: 50%; /* Расположение точек по горизонтали */
+  transform: translateX(-50%);
+  margin: 0;
+}
+.gallery-slider-7 .slick-dots li {
+  list-style: none;
+  margin: 0px 5px;
+}
+.gallery-slider-7 .slick-dots button {
+  font-size: 0;
+  width: 5px;
+  height: 5px;
+  padding: 3px; /* Размер точек */
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.gallery-slider-7 .slick-dots li.slick-active button {
+  background-color: #fff;
+}
+
+.gallery-slider-7 h3 {
+  font-size: 12px;
+  color: yellow;
+  max-width: 100%;
+  white-space: normal !important; /*Отображение пробелов между словами */
+}
+
+/* Стили для слайдера gallery-7-галерея с названиями картинок END */
