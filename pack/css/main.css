@@ -136,6 +136,32 @@
   margin: auto 0;
 }
 
+/* Стрелки */
+button {
+}
+.gallery .slick-arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 0;
+  width: 60px;
+  height: 60px;
+  margin-top: -30px;
+  box-shadow: none;
+  border: none;
+  z-index: 2;
+  outline: none;
+}
+/* Стрелка влево */
+.gallery .slick-arrow.slick-prev {
+  left: 0;
+  background: url(../img/left-arrow2.svg) 0 0 / 100% no-repeat;
+}
+/* Стрелка вправо */
+.gallery .slick-arrow.slick-next {
+  right: 0;
+  background: url(../img/right-arrow2.svg) 0 0 / 100% no-repeat;
+}
+
 /* Точки (булиты) */
 .gallery .slick-dots {
   display: flex;
