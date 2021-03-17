@@ -137,32 +137,15 @@
 }
 
 /* Стрелки */
-.arrows-2 {
-  border: none;
-}
-.arrows-2 .slick-arrow {
-  position: absolute;
-  top: 50%;
-  font-size: 0;
-  width: 60px;
-  height: 60px;
-  margin-top: -30px;
-  box-shadow: none;
-  border: none;
-  z-index: 2;
-  outline: none;
-}
 /* Стрелка влево */
-.arrows-2 .slick-arrow.slick-prev {
-  left: 0;
+.arrows-l {
   /* Изменить путь к картинке левой стрелки */
-  background: url(../img/left-arrow2.svg) 0 0 / 100% no-repeat;
+  background: url(../img/left-arrow2.svg) center / 50% no-repeat;
 }
 /* Стрелка вправо */
-.arrows-2 .slick-arrow.slick-next {
-  right: 0;
+.arrows-r {
   /* Изменить путь к картинке правой стрелки */
-  background: url(../img/right-arrow2.svg) 0 0 / 100% no-repeat;
+  background: url(../img/right-arrow2.svg) center / 50% no-repeat;
 }
 
 /* Точки (булиты) */
