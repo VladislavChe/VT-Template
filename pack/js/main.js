@@ -4,7 +4,7 @@ $(document).ready(function () {
   $('.gallery').slick({
     /* Настройки слайдера */
     arrows: true /* Вкл/выкл стрелок вперед, назад */,
-    appendArrows: $('.arrows-2'),
+    appendArrows: $('.arrows-2') /* Куда переносить стрелки */,
     dots: true /* Вкл/выкл точек (булетов) */,
     adaptiveHeight: false /* Вкл/выкл адаптивной высоты */,
     autoplay: false /* Вкл/выкл автопрокрутки */,
