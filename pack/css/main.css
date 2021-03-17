@@ -137,9 +137,10 @@
 }
 
 /* Стрелки */
-button {
+.arrows-2 {
+  border: none;
 }
-.gallery .slick-arrow {
+.arrows-2 .slick-arrow {
   position: absolute;
   top: 50%;
   font-size: 0;
@@ -152,13 +153,13 @@ button {
   outline: none;
 }
 /* Стрелка влево */
-.gallery .slick-arrow.slick-prev {
+.arrows-2 .slick-arrow.slick-prev {
   left: 0;
   /* Изменить путь к картинке левой стрелки */
   background: url(../img/left-arrow2.svg) 0 0 / 100% no-repeat;
 }
 /* Стрелка вправо */
-.gallery .slick-arrow.slick-next {
+.arrows-2 .slick-arrow.slick-next {
   right: 0;
   /* Изменить путь к картинке правой стрелки */
   background: url(../img/right-arrow2.svg) 0 0 / 100% no-repeat;
