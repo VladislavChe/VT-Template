@@ -124,8 +124,12 @@
 .gallery .gallery-item {
   display: flex;
   text-align: center;
-  justify-content: center;
+  justify-content: flex-end;
+  padding: 5px;
   height: 100%;
+}
+.gallery .gallery-item:nth-child(even) {
+  justify-content: flex-start;
 }
 
 /* Картинки */
